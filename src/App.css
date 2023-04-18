@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* front end para desktop apartir dos 703pixels */
+@media (min-width: 703px) {
+  main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .App {
+    height: 100vh;
+    background-color: #1d1d1d;
+    width: 100%;
+  }
+  
+  
+  /* Barra lateral do navbar com o footer */
+  .box-nav-footer {
+    height: 100%;
+    width: 400px;
+    background-color: black;
+    margin-bottom: 30px;
+    z-index: 5;
+  }
+
+  /* Barra horizontal do navegador */
+  ::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  /* container do conteudo central */
+  .container-conteudo {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+  }
+  .navegacao {
+    background-color: #101010;
+    position: fixed;
+    z-index: 4;
+    top: 0px;
+    left: -00px;
+    width: 100%;
+  }
+  
+  .conteudo {
+    width: 100%;
+    padding-top: 80px;
+  }
+
+  /* determinando que o footer mobile nao ira aparecer */
+  .footer-mobile {
+    opacity: 0;
+    display: none;
+  }
+
+}
+
+/* front end para mobile apartir dos 702pixels */
+@media (max-width: 702px) {
+
+  .App {
+    background-color: rgba(0, 0, 0, 0.938);
+  }
+    
+    .conteudo {
+      margin-top: 20px; 
+    }
+
+
+    .footer-mobile {
+      padding-bottom: 30px;
+      padding-top: 10px;
+      margin-top: 30px;
+      border-top: 1px solid gray;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .footer-mobile button {
+      margin-left: 20px;
+    }
+
+    footer {
+      opacity: 0;
+    }
+
+    /* parte da navegação ela so e ativada no modo desktop */
+    .navegacao {
+      opacity: 0;
+      display: none;
+    }
+}

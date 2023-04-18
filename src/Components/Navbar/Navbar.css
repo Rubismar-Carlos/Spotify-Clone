@@ -1,0 +1,190 @@
+/* front end para desktop apartir dos 703pixels */
+@media (min-width: 703px) {
+    nav {
+        height: 85vh;
+        text-align: left;
+        margin-right: 10px;
+        width: 90%;
+    }
+    
+    .active {
+        color: white;
+    }
+    
+    .img-logo {
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .img-logo a {
+        display: flex;
+        gap: 10px;
+        text-decoration: none;
+    }
+    
+    .img-logo svg, h2 {
+        color: white;
+    }
+    
+    li {
+        padding-left: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    
+    li > a {
+        font-size: 0.9em;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.692);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    li > a:hover {
+        color: white;
+    }
+    
+    nav svg {
+        font-size: 1.8em;
+    }
+    
+    /* Parte que tem criar playlist e musicas favoritas */
+    .add-music {
+        margin-top: 30px;
+    }
+
+    /* menu mobile vai ficar invisivel quando for acima de 703px */
+    .menu-mobile, .btn-app {
+        opacity: 0;
+        display: none;
+    }
+    
+}
+
+
+/* front end mobile aparti dos 702pixels*/ 
+@media (max-width: 702px) {
+    /* menu desktop vai ficar invisivel quando for abaixo de 702px */
+    .menu-desktop {
+        display: none;
+        opacity: 0;
+    }
+
+    /* navbar do menu mobile */
+    nav {
+        height: 70px;
+        background-color: black; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .nav-menu-mobile {
+        display: flex;
+        gap: 10px;
+        width: 100%;
+        justify-content: right;
+    }
+
+    .nav-mobile-search {
+        color: white;
+        font-size: 1.5em;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .btn-app button{
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 0.8em;
+    }
+
+    .img-logo {
+        margin-left: 10px;
+    }
+
+    .img-logo a {
+        display: flex;
+        gap: 5px;
+        text-decoration: none;
+        color: white;
+        text-decoration: none;
+    }
+
+    .img-logo svg {
+        font-size: 2em;
+    }
+
+    .btn-menu-mobile {
+        color: white;
+        font-size: 1.8em;
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-top: 5px;
+    }
+
+    /* menu mobile quando aparecer na tela */
+    .menu-mobile {
+        position: fixed;
+        transition: 2s;
+        top: 0px;
+        left: 0px;
+        z-index: 3;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .menu-mobile a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .close-menu-mobile {
+        color: white;
+        font-size: 2em;
+        text-align: right;
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+
+    .menu-mobile-login-register li {
+        font-size: bolder;
+        margin-left: 30px;
+        margin-top: 30px;
+    }
+
+    .menu-mobile-divisor {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        margin-left: 30px;
+        width: 20px;
+        background-color: white;
+        height: 2px;
+    }
+
+    .menu-mobile-outros li {
+        font-size: 1.1em;
+        padding-top: 15px;
+        margin-left: 30px;
+        list-style: none;
+    }
+
+    /* ativação do menu mobile */
+    .menu-active {
+        opacity: 1;
+    }
+
+    .menu-inactive {
+        opacity: 0;
+        display: none;
+    }
+}
